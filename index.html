@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Homepage</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<style>
+    /* body{
+        display:flex;
+        flex-direction: column;
+    } */
+    body{
+        display: grid;
+        grid-template-areas: 
+        "navbar"
+        "container"
+        "footer";
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    
+    #navbar{
+        grid-area: navbar;
+        position: fixed;
+        
+        right: 0;
+    }
+    li{
+        display: inline;
+        float: right;
+        padding: 5px;
+     }
+    li a{
+        text-decoration: none;
+        display: block;
+        color: rgb(46, 38, 38);
+    }
+    li a:hover{
+        text-decoration: underline;
+    }
+    #container{
+        grid-area: container;
+        margin-top: 200px;
+        text-align: center;
+        
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+       grid-template-rows: 1fr 1fr 1fr;
+       
+        
+    }
+    #logo{
+        
+        grid-area: 1/3/2/5;
+        align-self:end:
+    }
+    form{
+       
+       grid-area:  2/2/ 3/6;
+       align-self: center;
+    }
+    #searchbar{
+        border-radius: 20px;
+        width: 85%;
+        border-width: 0.5px;
+        padding: 10px;
+
+    }
+    #searchbar:hover{
+        box-shadow: 4px 2px 7px rgb(218, 215, 215);
+    }
+    .buttons{
+       grid-area: 3/3/ 4/5;
+       align-self: start;
+       
+    }
+    
+    #search-button {
+       padding: 7px 20px 7px 20px;
+       border:  none;
+       background-color: #f8f9fa;
+       color: #4c4d4e;
+       border-radius: 5px;
+    }
+    #search-button:hover{
+        border: 1px solid rgb(190, 188, 188);
+        
+    }
+   
+    #lucky-button {
+       padding: 7px 20px 7px 20px;
+       border:  none;
+       background-color: #f8f9fa;
+       color: #4c4d4e;
+       border-radius: 5px;
+    }
+    #lucky-button:hover{
+        border: 1px solid rgb(190, 188, 188);
+    }
+    .footer-container{
+       background-color: rgb(240, 240, 240);
+       font-size: 15px;
+       color: rgb(112, 112, 119);
+       width: 100%;
+    }
+    .main-footer{
+        display:  flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left:50px;
+        margin-right: 50px;
+        align-items: baseline;
+        /* border: rgb(53, 52, 58); */
+        padding: 10px 7px 10px 7px;
+        border-top: 1px solid rgb(224, 221, 221);
+        
+    }
+    
+    #country{
+        
+        font-size: 13px;
+        margin-left: 20px; 
+        padding-top: 10px;
+        padding-bottom: 10px;
+        /* border-bottom: 1px solid rgb(224, 221, 221); */
+    }
+    .main-footer a{
+        text-decoration: none;
+        padding: 18px;
+        font-size: 12px;
+        color: rgb(112, 112, 119);
+    }
+    .main-footer a:hover{
+        text-decoration: underline;
+    }
+    footer{
+        grid-area:footer;
+        position:fixed;
+        left: 0;
+        right: 0;
+        bottom:0;
+        width: 100%;
+
+    }
+</style>
+
+<body>
+    <!--START OF NAVBAR-->
+    <header>
+    <nav id="navbar">
+        <ul>                    
+            <li><span class="material-icons">
+                account_circle
+                </span></li>
+            <li><a href=""><span class="material-icons">
+                    apps
+                    </span></a></li>
+            <li><a href="">Images</a></li>
+            <li><a href="">Gmail</a></li>
+        </ul>
+    </nav>
+    </header>
+    <!--END OF NAVBAR-->
+
+    <!--START OF MAIN CONTAINER-->
+    <div id="container">
+        <div id="logo">
+            <img id="logo-img" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+        </div>
+        <form id="search-bar" name="search">
+            <input id="searchbar" type="text" name="search" placeholder="search...">
+            
+        </form>
+        <div class="buttons">
+            <input id="search-button" type="button" value="Google Search" name="search">
+            <input id="lucky-button" type="button" value="I'm feeling lucky" name="search">
+        </div>
+    </div>
+    <!--END OF MAIN CONTAINER-->
+
+    <!--START OF FOOTER-->
+    <footer>
+    <div class="footer-container">
+        <div id=country>
+            United Arab Emirates
+        </div>
+        <div class="main-footer">
+            <div id="left">
+                <a href="">About</a>
+                <a href="">Advertising</a>
+                <a href="">Business</a>
+                <a href="">How Search works</a>
+            </div>
+            <div id="rightside">
+                <a href="">Privacy</a>
+                <a href="">Terms</a>
+                <a href="">Settings</a>
+            </div>
+        </div>
+    </div>
+    </footer>
+</body>
+</html>
